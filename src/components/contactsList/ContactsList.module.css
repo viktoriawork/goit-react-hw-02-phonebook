@@ -1,0 +1,27 @@
+.renderLi {
+  text-decoration: none;
+  list-style: none;
+  padding: 10px;
+}
+.renderLi:not(:last-child) {
+  margin-bottom: 13px;
+}
+.btnLi {
+  margin-left: 9px;
+  padding: 10px 20px;
+  background-color: #680830; 
+  color: white; 
+  border:none;
+  margin:15px;
+ 
+}
+.btnLi:hover{
+   
+    background-color: #be125a;
+    color: white;
+
+}
+li{
+  padding: 0px;
+  margin:0px;
+}
