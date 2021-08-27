@@ -43,13 +43,13 @@ class App extends Component {
   render() {
     return (
       <>
-        <Section title={"Phonebook"}>
+        <Section title={"PHONEBOOK"}>
           <ContactForm
             onHandlerFilter={this.onHandlerFilter}
             onSubmit={this.onFormSubmitHandler}
           />
         </Section>
-        <Section title={"Contacts finder"}>
+        <Section title={"CONTACTS FINDER"}>
           <Filter
             onHandlerFilter={this.onHandleContactForm}
             filter={this.state.filter}
