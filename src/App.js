@@ -19,8 +19,8 @@ class App extends Component {
   // if contact already exist
 
   onFormSubmitHandler = (text, value) => {
-    console.log(text);
-    console.log(value);
+    // console.log(text);
+    // console.log(value);
     const newContact = { id: uuidv4(), name: text, number: value };
     if (
       this.state.contacts
