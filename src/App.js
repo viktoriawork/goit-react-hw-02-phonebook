@@ -15,16 +15,25 @@ class App extends Component {
     ],
     filter: "",
   };
-  onFormSubmitHandler = (name, number) => {
-    if (this.state.contacts.find((contact) => contact.name === name)) {
-      alert("Введите другое имя!");
-      return;
-    }
 
+  // if contact already exist
+
+  onFormSubmitHandler = (text, value) => {
+    console.log(text);
+    console.log(value);
+    const newContact = { id: uuidv4(), name: text, number: value };
+    if (
+      this.state.contacts
+        .map((contact) => contact.name.toLowerCase())
+        .includes(text.toLowerCase())
+    ) {
+      return alert(`Contact "${text}" already exists`);
+    }
     this.setState((prevState) => ({
-      contacts: [...prevState.contacts, { id: uuidv4(), name, number }],
+      contacts: [newContact, ...prevState.contacts],
     }));
   };
+
 
   onHandleFilter = (e) => {
     this.setState({ filter: e.currentTarget.value });
