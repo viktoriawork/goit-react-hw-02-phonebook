@@ -17,7 +17,7 @@ const ContactsList = ({ filter, contacts, onDeleteContact }) => {
             type="button"
             onClick={() => onDeleteContact(id)}
           >
-            Delete &#x2193;
+            Delete
           </button>
         </li>
       ))}
